@@ -1,0 +1,7 @@
+# Set TF_VAR_dns_key_secret environment variable to the secret key for authentication
+dns_domain        = "bksvc.otxlab.net"
+dns_server        = "bp2-iblox01-l001.otxlab.net"
+dns_key_name      = "bksvc."
+dns_key_algorithm = "hmac-sha256"
+hostname          = "testdnsrecord754922"
+ip                = "10.0.0.1"

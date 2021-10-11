@@ -1,0 +1,13 @@
+bigip_ssl_cert_name  = "wildcard.bksvc.otxlab.net_2021"
+bigip_ssl_chain_name = "wildcard.bksvc.otxlab.net_2021"
+bigip_ssl_key_name   = "wildcard.bksvc.otxlab.net_2021"
+bigip_vip_ip         = "10.14.227.50"
+bigip_vlans          = ["internal"]
+cluster_name = "test-cluster"
+datacenter = "bp-paas-sit"
+dns_zone_name = "resldap.net"
+environment = "s"
+node_count = 3
+service_port = "443"
+vapp_name = "test-tf-provisioning"
+vsphere_network_ips      = ["10.14.227.151","10.14.227.152","10.14.227.153"]
