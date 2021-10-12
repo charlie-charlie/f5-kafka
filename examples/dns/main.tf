@@ -7,6 +7,6 @@ module "dns_example" {
   dns_zone_name     = var.dns_domain
   dns_record_name   = var.hostname
   dns_record_ips    = var.ip
-  zone_class = 2
+  zone_class        = 2
   dns_record_ttl    = 300
 }

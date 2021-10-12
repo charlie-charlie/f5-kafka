@@ -1,0 +1,13 @@
+default:
+  image: registry.gitlab.com/gitlab-org/terraform-images/stable:latest
+  tags:
+    - docker
+    - bp2-lab
+
+stages:
+  - Check formating
+
+Check formating:
+  stage: Check formating
+  script:
+    - gitlab-terraform fmt --check --recursive

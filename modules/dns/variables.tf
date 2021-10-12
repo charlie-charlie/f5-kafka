@@ -43,10 +43,10 @@ variable "zone_class" {
   type        = number
   default     = 2
   validation {
-    condition = alltrue ([
+    condition = alltrue([
       var.zone_class > 0,
       var.zone_class <= 3
-    ]) 
+    ])
     error_message = "Please set a positive number among 1,2,3."
   }
 }
