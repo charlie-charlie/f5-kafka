@@ -1,19 +1,19 @@
 module "load_balancer" {
-  source               = "../../../modules/load_balancer/vsphere"
-  provision_lb         = true
+  source               = "../../modules/f5_load_balancer"
   bigip_partition      = var.bigip_partition
-  cluster_name         = var.cluster_name
-  dns_zone_name        = var.dns_zone_name
-  bigip_vip_ip         = var.bigip_vip_ip
   bigip_ssl_cert_name  = var.bigip_ssl_cert_name
-  bigip_ssl_key_name   = var.bigip_ssl_key_name
   bigip_ssl_chain_name = var.bigip_ssl_chain_name
+  bigip_ssl_key_name   = var.bigip_ssl_key_name
+  bigip_vip_ip         = var.bigip_vip_ip
   bigip_vlans          = var.bigip_vlans
-  hostname_fmt         = var.hostname_fmt
+  cluster_name         = var.cluster_name
   datacenter           = var.datacenter
-  vapp_name            = var.vapp_name
+  dns_zone_name        = var.dns_zone_name
   environment          = var.environment
+  hostname_fmt         = var.hostname_fmt
   node_count           = var.node_count
-  vm_ips               = var.vsphere_network_ips
+  provision_lb         = true
   service_port         = var.service_port
+  vapp_name            = var.vapp_name
+  vm_ips               = var.vsphere_network_ips
 }
