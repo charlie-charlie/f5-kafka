@@ -9,3 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Module to manage DNS entries
 - Module to manage F5 Load Balancer
 - Examples on how to use the modules.
+## [1.0.1] - 2021-10-21
+### Fixed
+- Output variable dns-a-fqdn in module DNS when provision_dns is false

@@ -1,6 +1,6 @@
 output "dns-a-fqdn" {
   description = "FQDN of the DNS A Record"
-  value       = format("%s.%s", dns_a_record_set.dns-a[0].name, dns_a_record_set.dns-a[0].zone)
+  value       = var.provision_dns ? format("%s.%s", dns_a_record_set.dns-a[0].name, dns_a_record_set.dns-a[0].zone) : null
 }
 
 output "dns-ptr-path" {
