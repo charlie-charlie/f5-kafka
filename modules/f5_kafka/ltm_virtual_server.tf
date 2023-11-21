@@ -1,3 +1,9 @@
+resource "time_sleep" "wait_for_attachment" {
+  depends_on = [bigip_ltm_pool_attachment.attachment]
+
+  create_duration = var.time_wait
+}
+
 # terraform import bigip_ltm_virtual_server.http /Common/terraform_vs_http
 resource "bigip_ltm_virtual_server" "tcp" {
   name                       = local.virtual_serve_name
@@ -19,4 +25,6 @@ resource "bigip_ltm_virtual_server" "tcp" {
   translate_port             = var.virtual_server_translate_port
   vlans                      = []
   vlans_enabled              = false
+
+  depends_on = [time_sleep.wait_for_attachment]
 }

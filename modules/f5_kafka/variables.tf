@@ -13,6 +13,12 @@ variable "app_name" {
   type        = string
 }
 
+variable "time_wait" {
+  description = "Seconds to wait for resource"
+  type        = number
+  default     = 2
+}
+
 ### variables for pool
 variable "pool_description" {
   description = "Specifies descriptive text that identifies the pool"
@@ -96,22 +102,8 @@ variable "ltm_node_port" {
   default     = 9092
 }
 
-variable "ltm_node_rate_limit" {
-  default = "disabled"
-}
-
-variable "ltm_node_connection_limit" {
-  default = 0
-}
-
-variable "ltm_node_dynamic_ratio" {
-  default = 1
-}
-
-variable "ltm_node_ratio" {
-  default = 1
-}
-
-variable "ltm_node_session" {
-  default = "user-enabled"
+variable "sleep_wait" {
+  description = "Seconds to wait"
+  type        = number
+  default     = 10
 }
